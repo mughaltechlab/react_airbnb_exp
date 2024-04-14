@@ -1,6 +1,10 @@
+import cardImg1 from '../assets/card_img1.png'
+import cardImg2 from '../assets/card_img2.png'
+import cardImg3 from '../assets/card_img3.png'
+
 export default  [
     {
-        img : './src/assets/card_img1.png',
+        img : cardImg1,
         rating: '3.5',
         review: '7',
         country: 'USA',
@@ -10,7 +14,7 @@ export default  [
         status : 'sold',
     },
     {
-        img : './src/assets/card_img2.png',
+        img : cardImg2,
         rating: '5',
         review: '6',
         country: 'USA',
@@ -19,7 +23,7 @@ export default  [
         isStatus: false,
     },
     {
-        img : './src/assets/card_img3.png',
+        img : cardImg3,
         rating: '4',
         review: '16',
         country: 'USA',
@@ -29,7 +33,7 @@ export default  [
         status : 'online',
     },
     {
-        img : './src/assets/card_img1.png',
+        img : cardImg1,
         rating: '3.5',
         review: '7',
         country: 'USA',
@@ -39,7 +43,7 @@ export default  [
         status : 'close',
     },
     {
-        img : './src/assets/card_img2.png',
+        img : cardImg2,
         rating: '5',
         review: '6',
         country: 'USA',
@@ -49,7 +53,7 @@ export default  [
         status : 'sales end',
     },
     {
-        img : './src/assets/card_img3.png',
+        img : cardImg3,
         rating: '4',
         review: '16',
         country: 'USA',
