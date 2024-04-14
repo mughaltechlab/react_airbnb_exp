@@ -1,0 +1,114 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  width: 100%;
+  min-height: 100dvh;
+}
+/* header / navbar */
+header{
+  background: #ffffff;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 10%);
+  padding-inline: 30px;
+  display: flex;
+  align-items: center;
+}
+header .logo{
+  width: 100px;
+  height: 30px;
+}
+/* section */
+section{
+  padding: 30px;
+}
+/* hero section */
+.hero{
+  display: flex;
+  flex-direction: column;
+}
+.hero .gridImg{
+  align-self: center;
+  width: 800px;
+}
+.hero .exp_text_wrapper{
+  max-width: 1000px;
+  width: 100%;
+  margin-inline: auto;
+  /* background: #000; */
+}
+.hero .exp_text_wrapper .exp_title{
+  font-size: 40px;
+  margin-block: 20px;
+}
+/**------------> cardsRow */
+.cardsRow{
+  overflow-x: scroll;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  max-width: 1024px;
+  margin-inline: auto;
+}
+.cardsRow::-webkit-scrollbar{
+  background: transparent;
+}
+.cardsRow .card{
+  width: 200px;
+  font-size: 12px;
+  flex-shrink: 0;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* flex: 0 0 auto; */
+}
+.cardsRow .card .status{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffffff;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+.cardsRow .card img{
+  width: 100%;
+}
+.cardsRow .card .ratingRow{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #918E9B;
+}
+.cardsRow .card .ratingRow i{
+  color: orange;
+}
+.cardsRow .card .title{
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cardsRow .card .price{
+  margin-block-start: auto;
+}
+.cardsRow .card .price span{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ! MEDIA */
+@media (max-width:800px){
+  .hero .gridImg{
+    width: min(100%,400px);
+  }
+}
+
+
+
