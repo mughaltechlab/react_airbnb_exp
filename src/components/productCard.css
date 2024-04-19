@@ -1,0 +1,165 @@
+.container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+    padding-block: 50px;
+    max-width: 1024px;
+    padding-inline: 20px;
+    margin-inline: auto;
+    
+    @media (max-width: 800px){
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @media (max-width: 450px){
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* card 
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+*/
+.productCard{
+    width: 300px;
+    height: 360px;
+    padding-block: 20px;
+    /* padding-inline: 20px; */
+    /* background: #162C46; */
+    background: linear-gradient(-45deg ,rgb(92, 17, 132), rgba(17, 17, 132,.5), rgb(234, 25, 25)) ;
+    /* background: linear-gradient(-45deg, #ee7752, #c45d84, #23a6d5, #23d5ab); */
+    background-size: 400% 400%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    position: relative;
+    animation: bgAnime 5s ease infinite alternate;
+    border-radius: 6px;
+
+}
+h1{
+    grid-column: 1/-1;
+}
+@keyframes bgAnime {
+    0%{
+        background-position: 0% 50%;
+        /* background-size: 0% 50%; */
+    }
+    50%{
+        background-position: 50% 100%;
+        /* background-size: 50% 100%; */
+
+    }
+    100%{
+        background-position: 100% 0%;
+        /* background-size: 100% 0%; */
+    }
+}
+/* card image div */
+.productCard .cardImg{
+    width: 280px;
+    height: 280px;
+    background: #f4f4f4;
+    overflow: hidden;
+    border-radius: 3px;
+}
+/* card img */
+.productCard .cardImg img{
+    /* width: 100%; */
+    /* width: 250px; */
+    /* height: 250px; */
+    height: 100%;
+    /* object-fit: cover; */
+    transition: transform .22s ease-in-out;
+    object-fit: cover;
+    object-position: center;
+}
+.productCard .cardImg:hover img{
+    transform: scale(1.1);
+}
+/* detail */
+.detail{
+    width: 100%;
+    padding-inline: 10px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.deal{
+    width: 100px;
+    padding: 5px 8px;
+    background: crimson;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    animation: opacityAnime .33s ease-in;
+}
+@keyframes opacityAnime {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.btnPrice{
+    display: flex;
+    justify-content: space-between;
+}
+.btnPrice .price{
+    text-align: right;
+    width: fit-content;
+    background: #162C46;
+    padding: 6px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: gold;
+    border-top-right-radius: 6px;
+}
+.productCard:hover .price{
+    transform: scale(1.1);
+    border-top-right-radius: 0px;
+}
+.btnPrice .btn{
+    all: unset;
+    cursor: pointer;
+    background: #7360d3;
+    padding-block: 8px;
+    padding-inline: 16px;
+    border-radius: 3px;
+    width: 100%;
+    transition: all .55s linear;
+    border: 1px solid yellow;
+    text-align: center;
+    font-weight: 600;
+}
+.btn:hover{
+    /* box-shadow: inset -50px 0 0 red, inset 50px 0 0 red; */
+    border: 1px solid #ffffff;
+    animation: insetShadowAnime 2s linear alternate;
+    
+}
+@keyframes insetShadowAnime {
+    to{
+        box-shadow: inset 50rem 0 0 purple, inset -50rem 0 0 purple;
+    }
+}
